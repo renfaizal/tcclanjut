@@ -1,3 +1,7 @@
+<p align="center">
+  (images/pertemuan1/gitlogo.png)
+
+</p>
 # Instalasi Git Pada Windows
 
 Terlebih dahulu silahkan mendownload file instalasi git untuk versi Windows [di sini](https://git-scm.com/download/win) . Untuk langkah berikutnya silahkan ikuti langkah-langkah berikut:
