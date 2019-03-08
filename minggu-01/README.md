@@ -1,7 +1,9 @@
+# Instalasi Git Pada Windows
+
+
 <p align="center">
   <img src="https://gitforwindows.org/img/gwindows_logo.png"/>
 </p>
-# Instalasi Git Pada Windows
 
 Terlebih dahulu silahkan mendownload file instalasi git untuk versi Windows [di sini](https://git-scm.com/download/win) . Untuk langkah berikutnya silahkan ikuti langkah-langkah berikut:
 
