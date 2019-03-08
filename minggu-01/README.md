@@ -26,30 +26,33 @@ Terlebih dahulu silahkan mendownload file instalasi git untuk versi Windows [di 
 
 ![06](images/pertemuan1/ss6.jpg)
 
-7. Pilih OpenSSL untuk koneksi HTTPS yang akan digunakan Git untuk mengakses repo GitHub.
-
+7. Pilih opsi OpenSSH untuk program SSH yang akan digunakan oleh Git.
 ![07](images/pertemuan1/ss7.jpg)
 
-8. Pilih opsi pertama untuk konversi baris akhir.
+8. Pilih OpenSSL untuk koneksi HTTPS yang akan digunakan Git untuk mengakses repo GitHub.
 
 ![08](images/pertemuan1/ss8.jpg)
 
-9. Pilih PuTTY untuk terminal yang akan digunakan untuk mengakses Git Bash.
+9. Pilih opsi pertama untuk konversi baris akhir.
 
 ![09](images/pertemuan1/ss9.jpg)
 
-10. Pilih opsi pertama dan kedua untuk opsi ekstra yang akan dienable.
+10. Pilih PuTTY untuk terminal yang akan digunakan untuk mengakses Git Bash.
 
 ![10](images/pertemuan1/ss10.jpg)
 
-11. Selanjutnya tunggu hingga proses instalasi selesai.
+11.  Pilih opsi pertama dan kedua untuk opsi ekstra yang akan dienable.
 
 ![11](images/pertemuan1/ss11.jpg)
 
-12. Kemudian akan muncul dialog pemberitahuan bahwa proses instalasi Git sudah selesai. Klik Finish.
+12.  Selanjutnya tunggu hingga proses instalasi selesai.
 
 ![12](images/pertemuan1/ss12.jpg)
 
-13. Coba cek pada Start Menu dengan mengetikkan Git, jika instalasi berhasil maka akan muncul menu baru bernama Git.
+13. Kemudian akan muncul dialog pemberitahuan bahwa proses instalasi Git sudah selesai. Klik Finish.
 
 ![13](images/pertemuan1/ss13.jpg)
+
+14. Coba cek pada Start Menu dengan mengetikkan Git, jika instalasi berhasil maka akan muncul menu baru bernama Git.
+
+![13](images/pertemuan1/ss14.jpg)
