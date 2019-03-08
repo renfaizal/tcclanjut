@@ -1,6 +1,5 @@
 <p align="center">
-  (images/pertemuan1/gitlogo.png)
-
+  <img src="https://gitforwindows.org/img/gwindows_logo.png"/>
 </p>
 # Instalasi Git Pada Windows
 
