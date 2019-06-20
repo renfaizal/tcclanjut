@@ -1,7 +1,11 @@
+
+## Part 1 - Deploying Your First Docker Container
+
 <p align="center">
   <img src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png"/>
 </p>
-## Part 1 - Deploying Your First Docker Container
+
+
 #### Step 1 - Menjalankan Sebuah Container
 1. Jalankan perintah `docker search redis` untuk mencari image di docker hub.
 
