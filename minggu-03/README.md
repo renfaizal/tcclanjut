@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png"/>
+</p>
 ## Part 1 - Deploying Your First Docker Container
 #### Step 1 - Menjalankan Sebuah Container
 1. Jalankan perintah `docker search redis` untuk mencari image di docker hub.
@@ -81,7 +83,11 @@ Membuat Dockerfile untuk membuild image yang nanti akan digunakan untuk membuat 
 
 ## Part 3 - Building Container Images
 
-<p align="center">
-  <img src="https://gitforwindows.org/img/gwindows_logo.png"/>
-</p>
+### Step 1 - Base Images
+### Step 2 - Menjalankan Commands
+### Step 3 - Mengekspose Port
+### Step 4 - Default Commands
+### Step 5 - Building Container
+### Step 6 - Menggunakan Container dengan Image Baru
+
 
