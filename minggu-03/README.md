@@ -3,36 +3,36 @@
 #### Step 1 - Menjalankan Sebuah Container
 1. Jalankan perintah `docker search redis` untuk mencari image di docker hub.
 
-![01](part1/ss3.jpg)
+	![01](part1/ss3.jpg)
 
 2. Jalankan perintah `docker run -d redis` untuk membuat dan menjalankan container redis. Untuk melihat status dari container jalankan perintah `docker ps`
 
-![02](part1/ss4.jpg)
+	![02](part1/ss4.jpg)
 
 #### Step 2 - Menampilkan Container Yang Berjalan
 1. Untuk menampilkan container yang berjalan digunakan perintah `docker ps`.
 
-![03](part1/ss5.jpg)
+	![03](part1/ss5.jpg)
 
 #### Step 3 - Mengakses Redis 1
 Agar container yang dibuat dapat diakses dari publik, maka container tersebut harus dilakukan expose port.
 1. Untuk melakukan expose port, berikan parameter tambahan `-p 6379:6379` pada saat menjalankan perintah docker run. Yang artinya container dapat diakses dari publik menggunakan port 6379.
 
-![04](part1/ss6.jpg)
+	![04](part1/ss6.jpg)
 
 
 #### Step 4 - Mengakses Redis 2
 1. Selain mengekspose dengan menentukan port yang akan digunakan untuk mengakses dari publik,  port exposing dapat juga dilakukan secara dynamic (random port assignment).
 
-![05](part1/ss7.jpg)
+	![05](part1/ss7.jpg)
 
 2. Untuk melihat port berapa yang diberikan oleh docker untuk container yang tadi diekspose, dapat digunakan perintah `docker port redisDynamic`.
 
-![06](part1/ss8.jpg)
+	![06](part1/ss8.jpg)
 
 3. Untuk melihat daftar container yang berjalan, gunakan perintah `docker ps`.
 
-![07](part1/ss9.jpg)
+	![07](part1/ss9.jpg)
 
 #### Step 5 - Menjalankan Kontainer
 #### Step 6 - Menjalankan Kontainer
