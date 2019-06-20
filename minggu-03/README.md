@@ -34,8 +34,20 @@ Agar container yang dibuat dapat diakses dari publik, maka container tersebut ha
 
 	![07](part1/ss9.jpg)
 
-#### Step 5 - Menjalankan Kontainer
-#### Step 6 - Menjalankan Kontainer
+#### Step 5 - Mempertahankan Data
+	Pada saat kita membuat sebuah container dan kemudian menghapus container tersebut, data-data yang tersimpan dalam containerpun juga akan ikut hilang. Namun permasalahan tersebut dapat diatasi dengan melakukan mount ke sebuah direktori diluar container, sehingga data pada container tidak akan ikut hilang ketika container dihapus.
+	
+	![08](part1/ss10.jpg)
+	
+#### Step 6 - Menjalankan Kontainer pada Foreground
+Untuk menjalankan container tanpa mode detached (tanpa menggunakan parameter -d), bisa dilakukan dengan menjalankan perintah `docker run` secara langsung.
+
+1. Perintah berikut akan menjalankan sebuah container Ubuntu dan kemudian menjalankan perintah `ps` untuk melihat semua proses yang berjalan pada container tersebut. 	
+	
+	![09](part1/ss11.jpg)
+
+2. Untuk mengakses container, dapat digunakan perintah `docker run -it ubuntu bash`.
+	![10](part1/ss12.jpg)
 
 ## Part 2 - Deploy Static HTML Website as Container
 ## Part 3 - Building Container Images
