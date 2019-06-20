@@ -10,15 +10,16 @@
 ![02](part1/ss4.jpg)
 
 #### Step 2 - Menampilkan Container Yang Berjalan
-1. 
+1. Untuk menampilkan container yang berjalan digunakan perintah `docker ps`.
 
 ![03](part1/ss5.jpg)
 
 #### Step 3 - Mengakses Redis 1
-Agar container yang dibuat dapat diakses dari publik, maka container tersebut harus dilakukan port expose.
-1. 
+Agar container yang dibuat dapat diakses dari publik, maka container tersebut harus dilakukan expose port.
+1. Untuk melakukan expose port, berikan parameter tambahan `-p 6379:6379` pada saat menjalankan perintah docker run. Yang artinya container dapat diakses dari publik menggunakan port 6379.
 
 ![04](part1/ss6.jpg)
+
 
 #### Step 4 - Mengakses Redis 2
 1. Selain mengekspose dengan menentukan port yang akan digunakan untuk mengakses dari publik,  port exposing dapat juga dilakukan secara dynamic (random port assignment).
