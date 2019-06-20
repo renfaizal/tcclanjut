@@ -96,18 +96,22 @@ These base images are used as the foundation for your additional changes to run 
 	![17](part3/ss1.jpg)
 
 2. Build Container
+
 	![18](part3/ss2.jpg)
 
 
 3. Melihat Daftar Image
+
 	![19](part3/ss3.jpg)
 
 4. Default Commands
 
 5. Building Container
+
 	![20](part3/ss4.jpg)
 
 6. Menjalankan Container dengan Image Baru
+
 	![22](part3/ss5.jpg)
 
 
