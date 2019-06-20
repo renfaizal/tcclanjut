@@ -1,9 +1,13 @@
 
 ## Part 1 - Deploying Your First Docker Container
-#### Step 1 - Menjalankan Sebuah Kontainer
-	1. Jalankan perintah docker search redis untuk mencari image di docker hub.
+#### Step 1 - Menjalankan Sebuah Container
+1. Jalankan perintah `docker search redis` untuk mencari image di docker hub.
 ![01](part1/ss3.jpg)
-#### Step 2 - Menjalankan Kontainer
+
+2. Jalankan perintah `docker run -d redis` untuk membuat dan menjalankan container redis. Untuk melihat status dari container jalankan perintah `docker ps`
+![03](part1/ss4.jpg)
+
+#### Step 2 - Menjalankan Kontainer Redis
 #### Step 3 - Menjalankan Kontainer
 #### Step 4 - Menjalankan Kontainer
 #### Step 5 - Menjalankan Kontainer
