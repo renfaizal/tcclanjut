@@ -87,12 +87,27 @@ Membuat Dockerfile untuk membuild image yang nanti akan digunakan untuk membuat 
 
 
 ## Part 3 - Building Container Images
+All Docker images start from a base image. A base image is the same images from the Docker Registry which are used to start containers. Along with the image name, we can also include the image tag to indicate which particular version we want, by default, this is latest.
 
-### Step 1 - Base Images
-### Step 2 - Menjalankan Commands
-### Step 3 - Mengekspose Port
-### Step 4 - Default Commands
-### Step 5 - Building Container
-### Step 6 - Menggunakan Container dengan Image Baru
+These base images are used as the foundation for your additional changes to run your application. For example, in this scenario, we require NGINX to be configured and running on the system before we can deploy our static HTML files. As such we want to use NGINX as our base image.
+
+1. Membuat Dockerfile
+
+	![17](part3/ss1.jpg)
+
+2. Build Container
+	![18](part3/ss2.jpg)
+
+
+3. Melihat Daftar Image
+	![19](part3/ss3.jpg)
+
+4. Default Commands
+
+5. Building Container
+	![20](part3/ss4.jpg)
+
+6. Menjalankan Container dengan Image Baru
+	![22](part3/ss5.jpg)
 
 
