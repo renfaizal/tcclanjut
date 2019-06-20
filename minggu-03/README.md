@@ -50,6 +50,29 @@ Untuk menjalankan container tanpa mode detached (tanpa menggunakan parameter -d)
 	![10](part1/ss12.jpg)
 
 ## Part 2 - Deploy Static HTML Website as Container
+In this scenario, you'll learn how to create a Docker Image for running a static HTML website using Nginx. The scenario will explain how to build a Docker Image running Nginx with your HTML site.
+
+### Step 1 - Membuat Dockerfile
+	Membuat Dockerfile untuk membuild image yang nanti akan digunakan untuk membuat webserver.
+	![11](part2/ss1.jpg)
+### Step 2 - Build Docker Image
+1. Membuild image menggunakan perintah `docker build`
+	![12](part2/ss2.jpg)
+
+2. Menampilkan daftar image yang tersedia pada host
+	![13](part2/ss3.jpg)
+
+### Step 3 - Menjalankan Container
+1. Menjalankan container menggunakan image yang tadi dibuild.
+	![14](part2/ss4.jpg)
+
+2. Mengakses web server melalui curl
+	![15](part2/ss5.jpg)
+
+3. Mengakses aplikasi melalui web browser
+	![16](part2/ss6.jpg)
+
+
 ## Part 3 - Building Container Images
 
 <p align="center">
