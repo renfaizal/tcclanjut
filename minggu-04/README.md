@@ -26,12 +26,37 @@ Salah satu cara untuk menghubungkan container satu dengan container lainnya pada
 
 	![03](link/ss3.jpg)
 
-	Setelah link terbentuk, kita dapat melakukan ping ke container asal.
+	Setelah link terbentuk, kita dapat melakukan ping ke source container.
 
 	![04](link/ss4.jpg)
-	
+
 3. Menghubungkan aplikasi
+
+	Dengan dibuatnya link, aplikasi dapat terhubung dan berkomunasi dengan source container dengan cara yang biasa.
+
+	Berikut adalah salah satu contoh aplikasi sederhana dari node.js yang terhubung dengan redis menggunakan hostname redis.
+
+	![05](link/ss5.jpg)
+
+	Untuk mengetes koneksi dapat digunakan perintah `curl docker:3000`
+
+	![06](link/ss6.jpg)
+
 4. Menghubungkan ke CLI Redis
+
+	Selain menghubungkan aplikasi dengan source container, kita juga dapat menghubungkannya dengan tool CLI mereka sendiri.
+
+	Jalankan CLI dari Redis
+
+	![07](link/ss7.jpg)
+
+	Jalankan perintah `KEYS *` untuk menampilkan konten yang saat ini disimpan dalam source container redis
+
+	![08](link/ss8.jpg)
+
+	Ketikkan perintah `QUIT` untuk keluar dari CLI
+
+	![09](link/ss9.jpg)
 
 ## Menggunakan Docker Network  
 
