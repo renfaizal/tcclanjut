@@ -10,7 +10,8 @@ Salah satu cara untuk menghubungkan container satu dengan container lainnya pada
 
 1. Menjalankan Redis.
 
-Untuk percobaan jalankan sebuah redis server pada container yang nantinya akan kita hubungkan dengan container lainnnya.
+	Untuk percobaan jalankan sebuah redis server pada container yang nantinya akan kita hubungkan dengan container lainnnya.
+	
 	![01](link/ss1.jpg)
 
 2. Membuat link
