@@ -1,9 +1,9 @@
 # Docker Compose
 
-##Orchestration Using Docker Compose
+## Orchestration Using Docker Compose
 
 <p align="center">
-  ![01](compose/compose.jpg)
+  <img src="compose/compose.png"/>
 </p>
 
 ## Menggunakan Link
