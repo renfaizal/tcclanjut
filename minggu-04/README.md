@@ -63,20 +63,32 @@ Selain menggunakan link, dapat pula digunakan network untuk saling berkomunikasi
 1. Membuat Network Baru
 	Membuat Network
 	Untuk membuat sebuah network yang nantinya akan digunakan untuk komunikasi antar container dapat digunakan syntax `docker network create`
+	
 	![01](network/ss1.jpg)
+	
 	Menghubungkan ke sebuah Network
+	
 	Selanjutnya untuk menghubungkan sebuah container ke sebuah network, pada saat dilakukan running container ditambahkan parameter `--net=[nama network]`
+	
 	![02](network/ss2.jpg)
+
 2. Komunikasi Dalam Sebuah Network
 	Docker Network bersifat seperti network traditional dimana node dapat dihubungkan dan didisconnect.
 	Hal pertama yang akan kita sadari yaitu bahwa Docker tidak lagi melakukan assign environment variable ataupun mengupdate file hosts yang berada pada container.
+
 	![03](network/ss3.jpg)
+
 	![04](network/ss4.jpg)
+
 	Terlihat informasi yang tersimpan dalam file hosts container.
 	Cara dari container untuk saling berkomunikasi melalui Embedded DNS Server pada Docker.  DNS ini diassign ke semua container melalui IP 127.0.0.11 dan terkonfigurasi pada file resolv.conf
+
 	![05](network/ss5.jpg)
+
 	Ketika sebuah container mencoba untuk mengakses container lain melalui sebuah nama container, maka DNS akan mengambalikan IP Address dari container yang dimaksud.
+
 	![06](network/ss6.jpg)
+
 3. Menghubungkan Dua Container
 4. Membuat Aliases
 5. Memutuskan Container
