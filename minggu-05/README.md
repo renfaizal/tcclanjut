@@ -1,144 +1,83 @@
 # Docker Compose
 
-## Orchestration Using Docker Compose
-
 <p align="center">
   <img src="compose/compose.png"/>
 </p>
 
-## Menggunakan Link
+## Orchestration Using Docker Compose
 
-Salah satu cara untuk menghubungkan container satu dengan container lainnya pada docker adalah menggunakan Link. Docker Link merupakan sebuah fitur yang memungkinkan kita untuk mengijinkan container untuk melakukan discovery dengan container lainnya dan dapat melakukan pertukaran informasi antar container secara aman.
+	Docker Compose berjalan berdasarkan apa yang ada pada file docker-compose.yml. File tersebut mendefinisikan semua container dan pengaturan yang dibutuhkan untuk membuat sebuah cluster.
 
-1. Menjalankan Redis.
+1. Mendefinisikan Container Pertama
 
-	Untuk percobaan jalankan sebuah redis server pada container yang nantinya akan kita hubungkan dengan container lainnnya.
+	Pada file yml didefinisikan nama dari container yaitu web dan dibuild pada direktori  yang aktif saat ini.
 	
-	![01](link/ss1.jpg)
+	![01](compose/ss1.jpg)
 
-2. Membuat link
+2. Mendefinisikan Pengaturan
 	
-	Untuk terhubung ke sebuah container digunakan tambahan opsi  `--link <container-name|id>:<alias>` pada perintah saat dilakukan launching container baru.
-
-	Cara kerja dari link ini pertama Docker akan membuat sebuah environment berdasarkan pada container yang saling terhubung. Environment ini nantinya akan memberikan sebuah informasi referensi seperti Port dan IP Address dari container.
-
+	Pada compose juga didefinisikan pengaturan yang berkaitan dengan container, seperti links yang digunakan untuk menghubungkan container satu dengan yang lainnya dan ports yang digunakan oleh aplikasi.
+	
 	![02](link/ss2.jpg)
 
-	Selanjutnya Docker akan mengupdate file HOSTS dari container dengan sebuah entry untuk container asal dengan tiga nama, yaitu: asal, alias dan hash-id.
+3. Medefinisikan Container Kedua
 
+	Pada file yml yang sama didefinisikan pembuatan container kedua, bernama redis. Dengan image yang diambil dari redis:alpine dan volume yang digunakan pada `/var/redis/data: /data`
+	
 	![03](link/ss3.jpg)
-
-	Setelah link terbentuk, kita dapat melakukan ping ke source container.
-
+	
+4. Docker Up
+	
+	Untuk menjalankan docker compose digunakan `docker-compose up -d`
+	
 	![04](link/ss4.jpg)
-
-3. Menghubungkan aplikasi
-
-	Dengan dibuatnya link, aplikasi dapat terhubung dan berkomunasi dengan source container dengan cara yang biasa.
-
-	Berikut adalah salah satu contoh aplikasi sederhana dari node.js yang terhubung dengan redis menggunakan hostname redis.
-
+	
+5. Docker Management
+	
+	Docker Compose tidak hanya mengelola pembuatan container tapi juga dapat digunakan untuk mengelola semua container dengan hanya menggunakan satu perintah.
+	
+	Untuk melihat daftar container yang berjalan dapat digunakan perintah `docker-compose ps`
+	
 	![05](link/ss5.jpg)
-
-	Untuk mengetes koneksi dapat digunakan perintah `curl docker:3000`
-
+	
+	Untuk melihat logs dari semua container yang berjalan dapat digunakan perintah `docker-compose logs`
+	
 	![06](link/ss6.jpg)
-
-4. Menghubungkan ke CLI Redis
-
-	Selain menghubungkan aplikasi dengan source container, kita juga dapat menghubungkannya dengan tool CLI mereka sendiri.
-
-	Jalankan CLI dari Redis
-
+	
+6. Docker Scale
+	
+	Docker Compose juga dapat digunakan untuk melakukan scale pada container yang menjalankan aplikasi. Scale memungkinkan kita untuk menetapkan berapa banyak service dan instance yang kita inginkan untuk menjalankan aplikasi yang kita buat.
+	Untuk melakukan scale container dapat dilakukan dengan cara menjalankan syntax `docker-compose scale`
+	
 	![07](link/ss7.jpg)
-
-	Jalankan perintah `KEYS *` untuk menampilkan konten yang saat ini disimpan dalam source container redis
-
+	
+	Untuk scale down dapat dilakukan dengan mengubah nilai dari scale 
+	
 	![08](link/ss8.jpg)
 
-	Ketikkan perintah `QUIT` untuk keluar dari CLI
 
+		
+7. Docker Stop
+	
+	Untuk menghentikan semua container yang berjalan secara sekaligus dapat digunakan perintah `docker-compose stop`
+	
 	![09](link/ss9.jpg)
+	
+	Sedangkan untuk menghapus semua container dapat digunakan perintah `docker-compose rm`
+	
+	![10](link/ss10.jpg)
 
-## Menggunakan Docker Network  
-Selain menggunakan link, dapat pula digunakan network untuk saling berkomunikasi antar container.
-1. Membuat Network Baru
+# Docker Swarm
 
-	Membuat Network
-	
-	Untuk membuat sebuah network yang nantinya akan digunakan untuk komunikasi antar container dapat digunakan syntax `docker network create`.
-	
-	![01](network/ss1.jpg)
-	
-	Menghubungkan ke sebuah Network
-	
-	Selanjutnya untuk menghubungkan sebuah container ke sebuah network, pada saat dilakukan running container ditambahkan parameter `--net=[nama network]`.
-	
-	![02](network/ss2.jpg)
+<p align="center">
+  <img src="swarm/swarm.png"/>
+</p>
 
-2. Komunikasi Dalam Sebuah Network
+## Getting Started With Swarm Mode
 
-	Docker Network bersifat seperti network traditional dimana node dapat dihubungkan dan didisconnect.
-	Hal pertama yang akan kita sadari yaitu bahwa Docker tidak lagi melakukan assign environment variable ataupun mengupdate file hosts yang berada pada container.
-
-	![03](network/ss3.jpg)
-
-	![04](network/ss4.jpg)
-
-	Terlihat informasi yang tersimpan dalam file hosts container.
-	Cara dari container untuk saling berkomunikasi melalui Embedded DNS Server pada Docker.  DNS ini diassign ke semua container melalui IP 127.0.0.11 dan terkonfigurasi pada file resolv.conf
-
-	![05](network/ss5.jpg)
-
-	Ketika sebuah container mencoba untuk mengakses container lain melalui sebuah nama container, maka DNS akan mengambalikan IP Address dari container yang dimaksud.
-
-	![06](network/ss6.jpg)
-
-3. Menghubungkan Dua Container
-	
-	Docker mendukung multiple network dan caontainer dapat diattach ke lebih dari satu network dalam satu waktu.
-	
-	Buat network baru dengan syntax `docker network create`
-	
-	![07](network/ss7.jpg)
-
-	Kemudian hubungkan container ke network yang dimaksud menggunakan perintah `docker network connect`
-	
-	![08](network/ss8.jpg)
-	
-	Deploy container baru yang terhubung  dengan network yang baru saja dibuatnya
-	
-	![09](network/ss9.jpg)
-	
-	Untuk mengetes container gunakan perintah `curl`
-	
-	![10](network/ss10.jpg)
-	
-	
-4. Membuat Aliases
-	
-	Links masih dapat digunakan ketika container menggunakan docker network dan menyediakan sebuah cara untuk mendefinisikan sebuah alias pada nama container.  Hal ini akan memberikan DNS entry tambahan dan dapat digunakan untuk melakukan discovery container.
-	
-	Untuk menghubungkan container menggunakan alias jalankan syntax berikut
-	
-	![11](network/ss11.jpg)
-	
-	Untuk mengetes container apakah container sudah terhubung dengan network atau belum dapat digunakan sntax berikut:
-	
-	![12](network/ss12.jpg)
-	
-
-5. Memutuskan Container
-
-	Untuk menampilkan daftar network yang ada dapat digunakan perintah `docker network ls`
-	
-	![13](network/ss13.jpg)
-	
-	Untuk melihat informasi container mana yang yang terhubung dengan sebuah docker network beserta IP Addressnya dapat digunakan perintah `docker network inspect`
-	
-	![14](network/ss14.jpg)
-	
-	Untuk melakukan disconnect sebuah container dengan sebuah docker network dapat digunakan perintah `docker network disconnect`
-	
-	![15](network/ss15.jpg)
-
+1. Inisialisasi Mode Swarm
+2. Join Cluster
+3. Membuat Overlay Network
+4. Deploy Service
+5. Inspect State
+6. Scale Service
