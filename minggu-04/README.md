@@ -61,7 +61,9 @@ Salah satu cara untuk menghubungkan container satu dengan container lainnya pada
 ## Menggunakan Docker Network  
 Selain menggunakan link, dapat pula digunakan network untuk saling berkomunikasi antar container.
 1. Membuat Network Baru
+
 	Membuat Network
+	
 	Untuk membuat sebuah network yang nantinya akan digunakan untuk komunikasi antar container dapat digunakan syntax `docker network create`
 	
 	![01](network/ss1.jpg)
@@ -73,6 +75,7 @@ Selain menggunakan link, dapat pula digunakan network untuk saling berkomunikasi
 	![02](network/ss2.jpg)
 
 2. Komunikasi Dalam Sebuah Network
+
 	Docker Network bersifat seperti network traditional dimana node dapat dihubungkan dan didisconnect.
 	Hal pertama yang akan kita sadari yaitu bahwa Docker tidak lagi melakukan assign environment variable ataupun mengupdate file hosts yang berada pada container.
 
