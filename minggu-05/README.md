@@ -18,19 +18,19 @@
 	
 	Pada compose juga didefinisikan pengaturan yang berkaitan dengan container, seperti links yang digunakan untuk menghubungkan container satu dengan yang lainnya dan ports yang digunakan oleh aplikasi.
 	
-	![02](link/ss2.jpg)
+	![02](compose/ss2.jpg)
 
 3. Medefinisikan Container Kedua
 
 	Pada file yml yang sama didefinisikan pembuatan container kedua, bernama redis. Dengan image yang diambil dari redis:alpine dan volume yang digunakan pada `/var/redis/data: /data`
 	
-	![03](link/ss3.jpg)
+	![03](compose/ss3.jpg)
 	
 4. Docker Up
 	
 	Untuk menjalankan docker compose digunakan `docker-compose up -d`
 	
-	![04](link/ss4.jpg)
+	![04](compose/ss4.jpg)
 	
 5. Docker Management
 	
@@ -38,34 +38,32 @@
 	
 	Untuk melihat daftar container yang berjalan dapat digunakan perintah `docker-compose ps`
 	
-	![05](link/ss5.jpg)
+	![05](compose/ss5.jpg)
 	
 	Untuk melihat logs dari semua container yang berjalan dapat digunakan perintah `docker-compose logs`
 	
-	![06](link/ss6.jpg)
+	![06](compose/ss6.jpg)
 	
 6. Docker Scale
 	
 	Docker Compose juga dapat digunakan untuk melakukan scale pada container yang menjalankan aplikasi. Scale memungkinkan kita untuk menetapkan berapa banyak service dan instance yang kita inginkan untuk menjalankan aplikasi yang kita buat.
 	Untuk melakukan scale container dapat dilakukan dengan cara menjalankan syntax `docker-compose scale`
 	
-	![07](link/ss7.jpg)
+	![07](compose/ss7.jpg)
 	
 	Untuk scale down dapat dilakukan dengan mengubah nilai dari scale 
 	
-	![08](link/ss8.jpg)
-
-
+	![08](compose/ss8.jpg)
 		
 7. Docker Stop
 	
 	Untuk menghentikan semua container yang berjalan secara sekaligus dapat digunakan perintah `docker-compose stop`
 	
-	![09](link/ss9.jpg)
+	![09](compose/ss9.jpg)
 	
 	Sedangkan untuk menghapus semua container dapat digunakan perintah `docker-compose rm`
 	
-	![10](link/ss10.jpg)
+	![10](compose/ss10.jpg)
 
 # Docker Swarm
 
