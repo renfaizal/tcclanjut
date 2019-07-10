@@ -64,13 +64,13 @@ Selain menggunakan link, dapat pula digunakan network untuk saling berkomunikasi
 
 ####	Membuat Network
 	
-	Untuk membuat sebuah network yang nantinya akan digunakan untuk komunikasi antar container dapat digunakan syntax `docker network create`
+	Untuk membuat sebuah network yang nantinya akan digunakan untuk komunikasi antar container dapat digunakan syntax `docker network create`.
 	
 	![01](network/ss1.jpg)
 	
 ####	Menghubungkan ke sebuah Network
 	
-	Selanjutnya untuk menghubungkan sebuah container ke sebuah network, pada saat dilakukan running container ditambahkan parameter `--net=[nama network]`
+	Selanjutnya untuk menghubungkan sebuah container ke sebuah network, pada saat dilakukan running container ditambahkan parameter `--net=[nama network]`.
 	
 	![02](network/ss2.jpg)
 
