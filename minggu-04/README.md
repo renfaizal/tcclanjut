@@ -93,6 +93,25 @@ Selain menggunakan link, dapat pula digunakan network untuk saling berkomunikasi
 	![06](network/ss6.jpg)
 
 3. Menghubungkan Dua Container
+	
+	Docker mendukung multiple network dan caontainer dapat diattach ke lebih dari satu network dalam satu waktu.
+	
+	Buat network baru dengan syntax `docker network create`
+	
+	![07](network/ss7.jpg)
+
+	Kemudian hubungkan container ke network yang dimaksud menggunakan perintah `docker network connect`
+	
+	![08](network/ss8.jpg)
+	
+	Deploy container baru yang terhubung  dengan network yang baru saja dibuatnya
+	
+	![09](network/ss9.jpg)
+	
+	Untuk mengetes container gunakan perintah `curl`
+	![10](network/ss10.jpg)
+	
+	
 4. Membuat Aliases
 5. Memutuskan Container
 
