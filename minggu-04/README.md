@@ -109,9 +109,34 @@ Selain menggunakan link, dapat pula digunakan network untuk saling berkomunikasi
 	![09](network/ss9.jpg)
 	
 	Untuk mengetes container gunakan perintah `curl`
+	
 	![10](network/ss10.jpg)
 	
 	
 4. Membuat Aliases
+	
+	Links masih dapat digunakan ketika container menggunakan docker network dan menyediakan sebuah cara untuk mendefinisikan sebuah alias pada nama container.  Hal ini akan memberikan DNS entry tambahan dan dapat digunakan untuk melakukan discovery container.
+	
+	Untuk menghubungkan container menggunakan alias jalankan syntax berikut
+	
+	![11](network/ss11.jpg)
+	
+	Untuk mengetes container apakah container sudah terhubung dengan network atau belum dapat digunakan sntax berikut:
+	
+	![12](network/ss12.jpg)
+	
+
 5. Memutuskan Container
+
+	Untuk menampilkan daftar network yang ada dapat digunakan perintah `docker network ls`
+	
+	![13](network/ss13.jpg)
+	
+	Untuk melihat informasi container mana yang yang terhubung dengan sebuah docker network beserta IP Addressnya dapat digunakan perintah `docker network inspect`
+	
+	![14](network/ss14.jpg)
+	
+	Untuk melakukan disconnect sebuah container dengan sebuah docker network dapat digunakan perintah `docker network disconnect`
+	
+	![15](network/ss15.jpg)
 
