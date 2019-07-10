@@ -20,7 +20,7 @@
 	
 	![02](compose/ss2.jpg)
 
-3. Medefinisikan Container Kedua
+3. Mendefinisikan Container Kedua
 
 	Pada file yml yang sama didefinisikan pembuatan container kedua, bernama redis. Dengan image yang diambil dari redis:alpine dan volume yang digunakan pada `/var/redis/data: /data`
 	
