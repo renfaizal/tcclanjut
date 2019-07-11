@@ -22,7 +22,10 @@ Go merupakan sebuah bahasa pemrograman yang memiliki webserver built in. Package
 
 	Untuk mendaftarkan sebuah request handler sebagai HTTP Server default dapat dilakukan dengan cara yang sederhana seperti dibawah ini:
 
-	> http.HandleFunc("/", func (w http.ResponseWriter, r  *http.Request) {
-	>	fmt.Fprintf(w, "Hello, you've requested: %s\n", r.URL.Path)
-	> })
+	```
+	 http.HandleFunc("/", func (w http.ResponseWriter, r  *http.Request) {
+		fmt.Fprintf(w, "Hello, you've requested: %s\n", r.URL.Path)
+	 })
+	 
+	```
 
