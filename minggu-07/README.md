@@ -13,7 +13,7 @@ Go merupakan sebuah bahasa pemrograman yang memiliki webserver built in. Package
 
 	Pertama, buat sebuah Handler yang digunakan untuk menerima semua koneksi HTTP yang masuk dari browser, client HTTP ataupun request API. Handler pada Go adalah sebuah fungsi yang memiliki struktur sebagai berikut
 	
-	'func (w http.ResponWritter, r *http.Request)'
+	`func (w http.ResponWritter, r *http.Request)`
 
 	Fungsi tersebut memiliki dua parameter, yaitu:
 	
@@ -24,5 +24,5 @@ Go merupakan sebuah bahasa pemrograman yang memiliki webserver built in. Package
 
 	> http.HandleFunc("/", func (w http.ResponseWriter, r  *http.Request) {
 	>	fmt.Fprintf(w, "Hello, you've requested: %s\n", r.URL.Path)
-> })
+	> })
 
